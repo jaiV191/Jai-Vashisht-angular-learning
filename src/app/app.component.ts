@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {User} from "./models/user";
-
+import {User} from "./shared/models/user";
+import {JsonPipe, NgForOf} from "@angular/common";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NgForOf, JsonPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
