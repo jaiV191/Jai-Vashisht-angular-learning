@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import {User} from "../shared/models/user";
+import {ContentListItemComponent} from "../player-list-item/content-list-item.component";
+import {JsonPipe, NgForOf, NgIf} from "@angular/common";
+
+
+
 
 @Component({
-  selector: 'app-player-list',
+  selector: 'app-content-list',
   standalone: true,
-  imports: [],
-  templateUrl: './players-list.component.html',
-  styleUrl: './players-list.component.css'
+  imports: [ NgForOf,NgForOf, JsonPipe, NgIf,ContentListItemComponent],
+  templateUrl: './content-list.component.html',
+  styleUrl: './content-list.component.css'
 })
-export class ContentListComponent {
-  players: User[] = [
+export class ContentListComponent{
+  players:User[] = [
     { id: 1, firstName: 'Michael', lastName: 'Jordan', team: 'Chicago Bulls', mvp: 5 },
     { id: 2, firstName: 'Kobe', lastName: 'Bryant', team: 'Los Angeles Lakers', mvp: 1 },
     { id: 3, firstName: 'LeBron', lastName: 'James', team: 'Los Angeles Lakers',mvp:4 },

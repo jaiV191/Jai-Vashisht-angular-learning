@@ -1,7 +1,17 @@
 <div>
   <h2>Nba Players</h2>
-  <app-player-list></app-player-list>
-  <app-player-list></app-player-list>
-  <app-player-list></app-player-list>
-  <app-player-list></app-player-list>
+  <div class="container">
+    <h2>Legendary Directory</h2>
+    <hr>
+    <div *ngFor="let player of players " class="legends-profile">
+      <p><strong>ID:</strong> {{player.id}}</p>
+      <p><strong>Name:</strong>{{player.firstName}} {{player.lastName}}</p>
+      <p><strong>Team:</strong>{{player.team}}</p>
+      <p><strong>MVP:</strong>{{player.mvp}}</p>
+      <hr>
+    </div>
+
+  </div>
+
+
 </div>
