@@ -3,5 +3,5 @@ export interface User {
   firstName:string;
   lastName:string;
   team:string;
-  isAdmin?:boolean;
+  mvp:number
 }

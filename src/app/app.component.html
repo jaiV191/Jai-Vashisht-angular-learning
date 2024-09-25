@@ -1,14 +1,17 @@
-
-<h1>{{ title }}</h1>
-<h2>{{ name }}</h2>
-<h2>{{ favPlayer }}</h2>
-
-<div class="container">
-  <h2>User List</h2>
-  <div *ngFor="let user of users" class="user-card">
-    <h3>{{user.id}}</h3>
-    <h3>{{ user.firstName }} {{ user.lastName }}</h3>
-    <p>Team: {{ user.team }}</p>
-    <p>Admin: {{ user.isAdmin ? 'Yes' : 'No' }}</p>
-  </div>
+<h1>{{title}}</h1>
+<div class="personal">
+<p>Created by:<strong>{{name}}</strong></p>
+<p>Favourite Player:<em>{{favPlayer}}</em></p>
 </div>
+<div class="container">
+  <h2>Legendary Directory</h2>
+  <hr>
+  <div *ngFor="let player of users" class="legends-profile">
+    <p><strong>ID:</strong> {{player.id}}</p>
+      <p><strong>Name:</strong>{{player.firstName}} {{player.lastName}}</p>
+      <p><strong>Team:</strong>{{player.team}}</p>
+    <p><strong>MVP:</strong>{{player.mvp}}</p>
+    <hr>
+      </div>
+  </div>
+
