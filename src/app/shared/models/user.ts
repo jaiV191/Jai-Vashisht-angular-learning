@@ -3,5 +3,7 @@ export interface User {
   firstName:string;
   lastName:string;
   team:string;
-  mvp:number
+  mvp:number;
 }
+
+

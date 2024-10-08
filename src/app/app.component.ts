@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {User} from "./shared/models/user";
 import {JsonPipe, NgForOf, NgIf} from "@angular/common";
-import {ContentListComponent} from "./player-list/content-list.component";
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, JsonPipe, NgIf, ContentListComponent],
+  imports: [RouterOutlet, NgForOf, JsonPipe, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

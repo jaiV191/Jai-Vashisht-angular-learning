@@ -4,14 +4,13 @@
     <h2>Legendary Directory</h2>
     <hr>
     <div *ngFor="let player of players " class="legends-profile">
-      <p><strong>ID:</strong> {{player.id}}</p>
-      <p><strong>Name:</strong>{{player.firstName}} {{player.lastName}}</p>
-      <p><strong>Team:</strong>{{player.team}}</p>
-      <p><strong>MVP:</strong>{{player.mvp}}</p>
+      <app-content-list-item [player]="player" ]></app-content-list-item>
+
       <hr>
     </div>
+
 
   </div>
 
 
-</div>
+</div>y
