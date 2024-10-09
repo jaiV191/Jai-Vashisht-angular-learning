@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {User} from "../shared/models/user";
 import {ContentListItemComponent} from "../player-list-item/content-list-item.component";
 import {JsonPipe, NgForOf, NgIf} from "@angular/common";
-import {players} from "../shared/mock-content";
+import {players} from "../shared/data/mock-content";
 
 
 
@@ -15,5 +15,4 @@ import {players} from "../shared/mock-content";
 })
 export class ContentListComponent{
   player:User[]=players;
-  protected readonly players = players;
 }
