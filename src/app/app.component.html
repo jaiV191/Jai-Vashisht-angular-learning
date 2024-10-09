@@ -3,6 +3,8 @@
 <p>Created by:<strong>{{name}}</strong></p>
 <p>Favourite Player:<em>{{favPlayer}}</em></p>
 </div>
+
+  <app-content-list-item *ngIf="gswplayer" [player]="gswplayer" ></app-content-list-item>
 <div class="container">
   <h2>Legendary Directory</h2>
   <hr>
