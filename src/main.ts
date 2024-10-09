@@ -1,6 +1,17 @@
+import {provideRouter,Routes} from "@angular/router";
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+import {ContentListComponent} from "./app/player-list/content-list.component";
+import {ContentListItemComponent} from "./app/player-list-item/content-list-item.component";
+
+const routes: Routes = [
+  { path: '', component: ContentListComponent },
+  { path: 'players', component: ContentListItemComponent },
+
+];
+
+
+bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes)]
+});
