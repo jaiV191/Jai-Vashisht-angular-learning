@@ -4,6 +4,7 @@ export interface User {
   lastName:string;
   team:string;
   mvp:number;
+  img:string;
 }
 
 
