@@ -5,6 +5,7 @@ import {JsonPipe, NgForOf, NgIf} from "@angular/common";
 import {PlayerService} from "../services/player.service";
 
 
+
 @Component({
   selector: 'app-content-list',
   standalone: true,
@@ -24,5 +25,8 @@ export class ContentListComponent implements OnInit{
       error:err=>console.error("Error fetching Players",err),
       complete:()=>console.log("Player data fetch complete")
     });
+
+
+
   }
 }
