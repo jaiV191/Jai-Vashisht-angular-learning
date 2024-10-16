@@ -1,16 +1,26 @@
-<div>
-  <h2>Nba Players</h2>
-  <div class="container">
+<div class="nba-players">
+  <h2>NBA Players</h2>
+  <div class="container legends-directory">
     <h2>Legendary Directory</h2>
-    <hr>
-    <div *ngFor="let player of players " class="legends-profile">
-      <app-content-list-item [player]="player" ></app-content-list-item>
-
-      <hr>
-    </div>
-
-
+    <table class="player-table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Team</th>
+        <th>MVP</th>
+        <th>Image</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let player of players" routerLink="/players/{{ player.firstName }}">
+        <td>{{ player.id }}</td>
+        <td>{{ player.firstName }} {{ player.lastName }}</td>
+        <td>{{ player.team }}</td>
+        <td>{{ player.mvp }}</td>
+        <td><img [src]="player.img" alt="Player Image" /></td>
+      </tr>
+      </tbody>
+    </table>
   </div>
-
-
-</div>y
+</div>

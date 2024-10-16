@@ -1,4 +1,5 @@
 <div style="border:2px solid black">
+  <div *ngIf="player" class="Content-list-item"></div>
   <h2>{{ player?.firstName}} {{player?.lastName}}</h2>
   <p><strong>Team:</strong>{{player?.team}}</p>
   <p><strong>MVPs:</strong>{{player?.mvp}}</p>
