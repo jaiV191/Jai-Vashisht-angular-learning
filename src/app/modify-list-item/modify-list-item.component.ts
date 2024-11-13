@@ -72,8 +72,6 @@ export class ModifyListItemComponent implements OnInit {
      }
 
   }
-  navigateToPlayerList():void{
-      this.router.navigate(['/players']);
-  }
+
 
 }

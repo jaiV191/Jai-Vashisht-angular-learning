@@ -3,8 +3,9 @@ import {User} from "../shared/models/user";
 import {ContentListItemComponent} from "../player-list-item/content-list-item.component";
 import {JsonPipe, NgForOf, NgIf} from "@angular/common";
 import {PlayerService} from "../services/player.service";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {players} from "../shared/data/mock-content";
+
 
 
 
@@ -22,7 +23,8 @@ export class ContentListComponent implements OnInit{
 
   players:User[]=[];
 
-  constructor(private playerService:PlayerService) {
+
+  constructor(private playerService:PlayerService,private router:Router) {
   }
 
   ngOnInit() {
@@ -39,4 +41,9 @@ export class ContentListComponent implements OnInit{
   selectPlayer(player:User):void{
     this.selectedPlayer=player;
   }
+
+  navigateToPlayerList() {
+
+      this.router.navigate(['/modify-list-item']);
+    }
 }

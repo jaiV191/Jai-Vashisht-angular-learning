@@ -19,6 +19,7 @@
         <td>{{ player.team }}</td>
         <td>{{ player.mvp }}</td>
         <td><img [src]="player.img" alt="Player Image" /></td>
+        <td><button (click)="navigateToPlayerList()">Edit</button> </td>
       </tr>
       </tbody>
     </table>
