@@ -27,7 +27,9 @@ private player:User[]=players;
     }
     return of(this.player);
     }
-    deletePlayer(id:number):Observable<User[]>{
+
+  deletePlayer(id: User):Observable<User[]>{
+    // @ts-ignore
     this.player=this.player.filter(player=>player.id===id);
       return of(this.player);
     }

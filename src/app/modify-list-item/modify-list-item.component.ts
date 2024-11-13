@@ -4,6 +4,7 @@ import {PlayerService} from "../services/player.service";
 import {FormBuilder,FormGroup,FormsModule,Validators,ReactiveFormsModule} from "@angular/forms";
 import {ActivatedRoute,Router} from "@angular/router";
 import {NgIf} from "@angular/common";
+import {players} from "../shared/data/mock-content";
 
 @Component({
   selector: 'app-modify-list-item',
@@ -59,6 +60,20 @@ export class ModifyListItemComponent implements OnInit {
           this.router.navigate(['/players'])
         }
       }
+  }
+  onDelete():void {
+     if (this.playerForm.valid){
+       const player:User=this.playerForm.value;
+       if (player.id){
+         this.playerService.deletePlayer(player)
+         this.router.navigate(['/players']);
+       }
+
+     }
+
+  }
+  navigateToPlayerList():void{
+      this.router.navigate(['/players']);
   }
 
 }
