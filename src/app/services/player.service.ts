@@ -31,4 +31,7 @@ private player:User[]=players;
     this.player=this.player.filter(player=>player.id===id);
       return of(this.player);
     }
+  generateNewId(): number {
+    return this.player.length > 0 ? Math.max(...this.player.map(players => players.id)) + 1 : 1;
+  }
 }

@@ -1,3 +1,28 @@
-<p>modify-list-item works!</p>
+<form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="id">ID:</label>
+    <input id="id" formControlName="id" type="text" />
+  </div>
 
-<a routerLink = "/modify-list-item" routerLinkActive="active"> Modify List</a>
+  <div>
+    <label for="firstName">First Name:</label>
+    <input id="firstName" formControlName="firstName" type="text" />
+  </div>
+
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" formControlName="lastName" type="text" />
+  </div>
+
+  <div>
+    <label for="team">Team:</label>
+    <input id="team" formControlName="team" type="text" />
+  </div>
+
+  <div>
+    <label for="mvp">MVP:</label>
+    <input id="mvp" formControlName="mvp" type="text" />
+  </div>
+
+  <button type="submit" >Add</button>
+</form>

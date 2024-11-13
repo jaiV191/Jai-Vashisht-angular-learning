@@ -4,7 +4,7 @@ import {User} from "./shared/models/user";
 import {JsonPipe, NgForOf, NgIf} from "@angular/common";
 import {ContentListItemComponent} from "./player-list-item/content-list-item.component";
 import {PlayerService} from "./services/player.service";
-import {players} from "./shared/data/mock-content";
+
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ import {players} from "./shared/data/mock-content";
 })
 export class AppComponent {
   title = 'Jai-Vashisht-angular-learning';
-  name: string = "Jai vashisht";
+  name: string = "Jai Vashisht";
   favPlayer: string = "Stephen Curry";
   players:User[]=[];
 
@@ -30,7 +30,7 @@ export class AppComponent {
     this.playerService.getPlayers().subscribe({
       next:(data:User[])=>this.players=data,
       error:err=>console.log("Error fetching Students",err),
-      complete:()=>console.log("Animal data fetch complete")
+      complete:()=>console.log("player data fetch complete")
     })
   }
 }
