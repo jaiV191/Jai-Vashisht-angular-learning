@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from "../shared/models/user";
 import {ContentListItemComponent} from "../player-list-item/content-list-item.component";
-import {JsonPipe, NgForOf, NgIf} from "@angular/common";
+import {DatePipe, DecimalPipe, JsonPipe, NgForOf, NgIf, UpperCasePipe} from "@angular/common";
 import {PlayerService} from "../services/player.service";
 import {Router, RouterLink} from "@angular/router";
 import {players} from "../shared/data/mock-content";
@@ -13,7 +13,7 @@ import {players} from "../shared/data/mock-content";
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [ NgForOf,NgForOf, JsonPipe, NgIf,ContentListItemComponent,RouterLink],
+  imports: [NgForOf, NgForOf, JsonPipe, NgIf, ContentListItemComponent, RouterLink, DatePipe, UpperCasePipe, DecimalPipe],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.css'
 })
@@ -46,4 +46,6 @@ export class ContentListComponent implements OnInit{
 
       this.router.navigate(['/modify-list-item']);
     }
+
+  protected readonly Date = Date;
 }

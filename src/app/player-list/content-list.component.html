@@ -7,7 +7,9 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>Draft Year</th>
         <th>Team</th>
+        <th>PPG</th>
         <th>MVP</th>
         <th>Image</th>
       </tr>
@@ -15,8 +17,10 @@
       <tbody>
       <tr *ngFor="let player of players" routerLink="/players/{{ player.firstName }}">
         <td>{{ player.id }}</td>
-        <td>{{ player.firstName }} {{ player.lastName }}</td>
+        <td>{{ player.firstName |uppercase }} {{ player.lastName|uppercase }}</td>
+        <td>{{player.draft|date:'yyyy'  }}</td>
         <td>{{ player.team }}</td>
+        <td>{{player.points|number:'1.0'}}</td>
         <td>{{ player.mvp }}</td>
         <td><img [src]="player.img" alt="Player Image" /></td>
         <td><button (click)="navigateToPlayerList()">Edit</button> </td>

@@ -13,6 +13,10 @@
     <label for="lastName">Last Name:</label>
     <input id="lastName" formControlName="lastName" type="text" />
   </div>
+  <div>
+    <label for="draft">Draft Year:</label>
+    <input id="draft" formControlName="Year" type="number" />
+  </div>
 
   <div>
     <label for="team">Team:</label>
@@ -20,10 +24,15 @@
   </div>
 
   <div>
+    <label for="points">Points Per Game:</label>
+    <input id="points" formControlName="points" type="text" />
+  </div>
+
+  <div>
     <label for="mvp">MVP:</label>
-    <input id="mvp" formControlName="mvp" type="text" />
+    <input id="mvp" formControlName="mvp" type="number" />
   </div>
 
   <button type="submit" >Add</button>
-  <button type="button" (click)="onDelete()">Delete</button>
+  <button type="button" (click)="onDelete()" >Delete</button>
 </form>
